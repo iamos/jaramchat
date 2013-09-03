@@ -1,6 +1,5 @@
 var log = "";
-// var message_time ;
-// message_time = new Date.getDate();
+
 
 // send 버튼 클릭 할
 function sendtext() {
@@ -8,8 +7,11 @@ function sendtext() {
 	var text = document.getElementById("input").value;
 	var date = new Date
 	var hour = date.getHours();
+	hour = convert(hour);
 	var min = date.getMinutes();
+	min = convert(min);
 	var sec = date.getSeconds();
+	sec = convert(sec);
 	var time = hour + " : " + min + " : " + sec;
 	// alert(hour + " : " + min+ " : " + sec );
 	
@@ -33,5 +35,15 @@ function sendtext() {
 function press_enter(){
 	if(event.keyCode == "13"){
 		sendtext();
+	}
+}
+// 시간을 두자리로 바꿔줌
+function convert(digit) {
+	if(digit < 10){ // 10보다 작으면, 숫자앞에 0을 붙여서 리턴
+		digit = "0" + digit;
+		return digit;
+	}
+	else{
+		return digit;
 	}
 }
