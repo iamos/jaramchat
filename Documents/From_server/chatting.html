@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+	<title>Chatting</title>
+	<script src = "chatting.js"></script>
+	<link rel="stylesheet" href="chat.css">
+	<meta charset ="utf-8">
+</head>
+<body>
+	<div id = "box">
+		
+		<div id = "chat">
+			<textarea disabled = "disabled" id = "log"	
+			rows = "18"
+			cols = "78"
+			
+			wrap="off">		
+			</textarea>
+		</div>
+		
+
+		<div id = "send">
+			
+			<div id = "sendbox">
+				<input id = "nickname" placeholder= "Nickname">
+				<input id = "input" type = "text" name = "contents" onkeypress = "press_enter()" placeholder="Type message here">
+				<button id = "btn_send" type = "submit" onclick= "sendtext()" >Send</button>
+					
+			</div>
+		</div>
+		
+	</div>
+</body>
